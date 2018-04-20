@@ -18,3 +18,10 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+## Configuration
+
+There are a couple of configuration files that you will need to add locally.
+
+* `dev.secret.exs`: This should contain your local Postgres configuration.
+* `prod.secret.exs`: This should contain production-specific secrets.
