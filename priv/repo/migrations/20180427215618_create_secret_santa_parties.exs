@@ -11,5 +11,6 @@ defmodule SecretSantaApi.Repo.Migrations.CreateSecretSantaParties do
       add :location, :string
 
       timestamps()
+    end
   end
 end
