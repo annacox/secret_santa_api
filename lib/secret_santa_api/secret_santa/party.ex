@@ -8,5 +8,7 @@ defmodule SecretSantaApi.SecretSanta.Party do
     field :passphrase, :string
     field :date, :naive_datetime
     field :location, :string
+
+    timestamps()
   end
 end
