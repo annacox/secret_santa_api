@@ -19,6 +19,15 @@ defmodule SecretSantaApiWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", SecretSantaApiWeb do
+    pipe_through :api
+
+    # =================================================================
+    # Party
+    # =================================================================
+    resources "/parties", PartyController, only: [:create, :show]
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", SecretSantaApiWeb do
   #   pipe_through :api
