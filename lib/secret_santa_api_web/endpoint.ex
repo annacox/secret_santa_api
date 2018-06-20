@@ -37,6 +37,14 @@ defmodule SecretSantaApiWeb.Endpoint do
     key: "_secret_santa_api_key",
     signing_salt: "xfHB0TtR"
 
+  plug(
+    Corsica,
+    origins: "http://localhost:3000",
+    log: [rejected: :error, invalid: :warn, accepted: :debug],
+    allow_headers: ["content-type"],
+    allow_credentials: true
+  )
+
   plug SecretSantaApiWeb.Router
 
   @doc """
