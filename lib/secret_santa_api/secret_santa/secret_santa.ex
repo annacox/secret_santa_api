@@ -14,7 +14,7 @@ defmodule SecretSantaApi.SecretSanta do
   def create_party(attrs \\ %{}) do
     %Party{}
     |> party_changeset(attrs)
-    |> Repo.insert()
+    |> Repo.insert!()
   end
 
   defp party_changeset(%Party{} = party, attrs) do
